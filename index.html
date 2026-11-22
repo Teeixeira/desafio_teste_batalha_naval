@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071b2a">
+    <title>Batalha Naval</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/browser.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Batalha Naval, início"><span class="brand-mark">BN</span><span>BATALHA<br><strong>NAVAL</strong></span></a>
+        <div class="top-meta"><span class="live-dot"></span> JOGO LOCAL <span class="meta-divider">·</span> 2 JOGADORES</div>
+      </header>
+
+      <section class="intro">
+        <div class="eyebrow" id="phase-label">FASE 01 — POSICIONAMENTO</div>
+        <h1 id="headline">Prepare sua frota.</h1>
+        <p id="subhead">Escolha um navio e clique no tabuleiro para posicioná-lo.</p>
+      </section>
+
+      <section id="status-card" class="status-card" aria-live="polite">
+        <div class="status-icon" id="status-icon">1</div>
+        <div class="status-copy"><strong id="status-title">Vez do Jogador 1</strong><span id="status-message">Posicione seus quatro navios.</span></div>
+        <button id="orientation-button" class="orientation-button" type="button">↔ <span>Horizontal</span></button>
+      </section>
+
+      <section class="game-layout">
+        <aside class="fleet-panel panel">
+          <div class="panel-heading"><div><span class="eyebrow">SUA FROTA</span><h2 id="fleet-player">Jogador 1</h2></div><span class="fleet-count" id="fleet-count">0 / 4</span></div>
+          <div class="fleet-list" id="fleet-list"></div>
+          <div class="fleet-note" id="fleet-note">Clique em um navio para selecioná-lo.</div>
+        </aside>
+
+        <section class="board-panel panel">
+          <div class="panel-heading board-heading"><div><span class="eyebrow" id="board-kicker">POSICIONAMENTO</span><h2 id="board-title">Seu tabuleiro</h2></div><span class="board-coords">A — J <i>·</i> 1 — 10</span></div>
+          <div class="board-wrap"><div class="board" id="board" role="grid" aria-label="Tabuleiro do jogo"></div></div>
+          <div class="board-footer"><span class="legend"><i class="legend-own"></i> Sua frota</span><span class="legend"><i class="legend-miss">·</i> Água</span><span class="legend"><i class="legend-hit">×</i> Acerto</span></div>
+        </section>
+      </section>
+
+      <footer class="bottom-bar">
+        <span class="rules-note" id="rules-note">Frota completa: 14 casas <span>·</span> Vence quem afundar todos os navios</span>
+        <button id="action-button" class="primary-button" type="button" disabled>Posicione seus navios <span>→</span></button>
+      </footer>
+    </main>
+
+    <div id="handoff" class="handoff hidden" role="dialog" aria-modal="true" aria-labelledby="handoff-title">
+      <div class="handoff-card"><div class="handoff-symbol">⚓</div><div class="eyebrow">PRÓXIMO TURNO</div><h2 id="handoff-title">Passe o dispositivo.</h2><p id="handoff-copy">Entregue o jogo ao próximo jogador sem mostrar sua tela.</p><button id="handoff-button" class="primary-button" type="button">Estou pronto <span>→</span></button></div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
+
