@@ -2,6 +2,13 @@
 
 Este projeto contém testes automatizados em JavaScript para validar as regras implementadas no módulo `src/jogo.js`.
 
+## Participantes do grupo
+
+| Nome | RA |
+|---|---|
+| Leonardo Teixeira de Carvalho | 24159859-2 |
+| Matheus Eduardo Polizelli | 24129411-2 |
+
 ## Requisitos
 
 - Node.js 22
